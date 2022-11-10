@@ -2,7 +2,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Button, Editor, Input, TextArea } from "../components";
+import { Button, Editor, Input, TextArea } from "../../components";
 export default function Create() {
   const [title, setTitle] = useState("");
   const [slug, setSlug] = useState("");
