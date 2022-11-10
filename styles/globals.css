@@ -43,6 +43,10 @@ a {
   }
 } */
 
+p {
+  margin: 0.7em 0;
+}
+
 .ProseMirror {
   padding: 0.75em;
 }
