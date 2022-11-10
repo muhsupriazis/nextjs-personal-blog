@@ -24,4 +24,17 @@ export default async function handler(req, res) {
       });
     }
   }
+  if (req.method == "PATCH") {
+    try {
+      // const { title, slug, content, summary, author, date } = req.body;
+      await Blog.updateOne({ _id: req.query.id }, { $set: req.body });
+      res.status(201).json({
+        message: "Sukses mengedit bro!",
+      });
+    } catch (error) {
+      res.status(500).json({
+        message: error.message,
+      });
+    }
+  }
 }

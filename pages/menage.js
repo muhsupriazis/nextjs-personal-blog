@@ -67,7 +67,6 @@ export default function Menage({ blogs }) {
 export async function getStaticProps() {
   const response = await axios.get(`${process.env.BASE_URL}/api/blogs`);
   const blogs = response.data;
-  console.log(blogs);
   return {
     props: {
       blogs,
